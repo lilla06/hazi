@@ -165,6 +165,7 @@ std::istream& operator>>(std::istream& is, MyString& m){
         temp = std::move(t);
         t = nullptr;
     }
+    delete[] temp;
     m = std::move(MyString{temp});
     return is;
 }
