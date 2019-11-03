@@ -130,7 +130,7 @@ void MyString::deleteValue(){
     if(string != nullptr){
         string->setCount()--;
         if(string->getCount() == 0)
-            string->~StringValue();
+            delete string;
         string = nullptr;
     }
 }
